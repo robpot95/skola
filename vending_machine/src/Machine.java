@@ -15,22 +15,31 @@ public class Machine {
     }
 
     public Boolean buyProduct(String name) {
+        final Product product = findProductByName(name);
+        if (findProductByName(name) != null) {
+            if (money > product.getPrice()) {
+                money -= product.getPrice();
+                return true;
+            } else {
+                System.out.println("Du har inte råd med denna produkt.");
+            }
+        } else {
+            System.out.println("Kunde inte hitta produkten.");
+        }
+        
+
+
+        return false;
+    }
+
+    private Product findProductByName(String name) {
         for (Product product : machine) {
             if (name.equals(product.getName())) {
-                if (money > product.getPrice()) {
-                    money -= product.getPrice();
-                    return true;
-                } else {
-                    System.out.println("Du har inte råd med denna produkt.");
-                    break;
-                }
-            } else {
-                System.out.println("Kunde inte hitta produkten.");
-                break;
+                return product;
             }
         }
 
-        return false;
+        return null;
     }
     
     public ArrayList<Product> getProducts() {

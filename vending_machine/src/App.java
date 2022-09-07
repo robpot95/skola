@@ -29,6 +29,8 @@ public class App {
                 if (machine.buyProduct(choice)) {
                     System.out.println("Tack för ditt köp. Du har " + machine.getMoney() + "kr kvar.");
                 }
+
+                System.out.println(choice);
             }
         }
     }
