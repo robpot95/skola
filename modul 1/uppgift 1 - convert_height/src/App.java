@@ -14,7 +14,7 @@ public class App {
 
     public static void convertHeight(String längdTyp, int längd) {
         // Kör simpel matte gångra value med längd. Om längdtypen inte finns med som nyckel, landa tillbaka på 0f
-        System.out.println(String.format("%s = %.1f", längdTyp, längdTyper.getOrDefault(längdTyp, 0f) * längd));
+        System.out.println(String.format("%d %s = %.1f cm", längd, längdTyp, längdTyper.getOrDefault(längdTyp, 0f) * längd));
     }
 
     public static void main(String[] args) throws Exception {
