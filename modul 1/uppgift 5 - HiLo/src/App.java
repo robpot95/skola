@@ -36,7 +36,11 @@ public class App {
                 }
 
                 försök += 1;
+<<<<<<< HEAD
                 if (gissning == randomNumber) {
+=======
+                if (nummerInput.nextInt() == randomNumber) {
+>>>>>>> 07f92b7be2e87dd1018357075d81fc8336d57922
                     System.out.println(String.format("%d är rätt. Det tog dig %d försök att gissa rätt.", randomNumber, försök));
                     break;
                 }

@@ -7,6 +7,8 @@ public class App {
                 System.out.println(i + " - Fizz");
             } else if (i % 5 == 0) {
                 System.out.println(i + " - Buzz");
+            } else {
+                System.out.println(i);
             }
         }
     }
